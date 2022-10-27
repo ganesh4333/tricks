@@ -1,3 +1,9 @@
-download entire website
+**download entire website
 
 wget --random-wait -r -p -e robots=off -U mozilla
+
+**Window 11 install without ms acc
+1:At the step of win11 to connect internet press
+Shift+F10 to open cmd
+system32>oobe\bypassnro 
+enter
