@@ -1,0 +1,18 @@
+How to use NMAP more effectively
+Below are the 5 different techniques that we'll take a look:
+1) Performing a Stealth SYN Scan, OS, and Version Detection with Nmap on a specific IP Address.
+2) Resuming Nmap Scans, saving results in Nmap’s own file format.
+3) Exploring Known Vulnerabilities with Nmap and Vulners Script.
+4) Using idle IP Addresses as Zombie to scan a target.
+5) Converting XML to Human-Readable Formats using the "xsltproc Tool".
+
+1. nmap -sSV -Pn -O -A -r host_id -oX output_file.xml
+
+2. nmap -p 80,443, 192.168.0.1/24 -oN save_scan.nmap
+	nmap --resume save_scan.nmap
+	
+3. nmap -sV --script vulners scanme.nmap.org
+
+4. nmap --script -ipidseq 192.168.0.1/24 --top-ports 2
+
+5. xsltproc results.html -o save_scan.html
